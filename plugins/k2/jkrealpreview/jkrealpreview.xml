@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="k2" method="upgrade">
+	<name>K2 - RealPreview Plugin.</name>
+	<author>Sankuru Team</author>
+	<creationDate>September 2011</creationDate>
+	<copyright></copyright>
+	<authorEmail></authorEmail>
+	<authorUrl>http://sankuru.biz</authorUrl>
+	<version>1.0</version>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>Saves/Creates K2 Item draft</description>
+	<files>
+		<filename plugin="jkrealpreview">jkrealpreview.php</filename>
+	</files>
+</install>

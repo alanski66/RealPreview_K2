@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0" method="upgrade">
+	<name>Real Preview_K2</name>
+	<!--name>COM_REAL_PREVIEW_K2</name-->
+	<author>Joomkit</author>
+	<creationDate>December 2011</creationDate>
+	<copyright>
+		Copyright (C) 2011 Joomkit Ltd. All rights reserved.
+	</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@joomkit.com</authorEmail>
+	<authorUrl>www.joomkit.com</authorUrl>
+	<version>1.1</version>
+	<description>Thank you for installing Real Preview for K2 Items. Please install and enable the plugins - then simply edit items as normal and preview without publishing</description>
+	<!--description>COM_REAL_PREVIEW_K2_DESC</description-->
+	 <install>
+		<!--sql>
+			<file driver="mysql" charset="utf8">install.realpreview_k2.sql</file>
+		</sql-->
+	</install>
+	<uninstall>
+		<!--sql>
+			<file driver="mysql" charset="utf8">uninstall.realpreview_k2.sql</file>
+		</sql-->
+	</uninstall>
+	
+	<installfile>install.realpreview_k2.php</installfile>
+	<scriptfile>script.realpreview_k2.php</scriptfile>
+
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>realpreview_k2.php</filename>
+		<filename>index.html</filename>
+	 </files>
+	 
+	<media folder="media/realpreview" destination="realpreview">
+		<folder>k2</folder>
+	</media>
+	
+	<administration>
+		<menu>K2 Real Preview</menu>
+		<files folder="admin">
+			<folder>assets</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>lib</folder>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<filename>admin.realpreview_k2.php</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>config.xml</filename>
+			<!--filename>install.realpreview_k2.sql</filename>
+			<filename>uninstall.realpreview_k2.sql</filename-->
+		</files>
+		
+		<languages folder="admin/language">
+			<language tag="en-GB">en-GB.com_realpreview_k2.ini</language>
+		</languages>
+	</administration>
+</install>

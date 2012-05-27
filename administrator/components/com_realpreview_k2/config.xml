@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<params>
+		<param 
+			name="targettype" 
+			type="radio" 
+			default="1" 
+			label="RPK2_PREVIEW_OPEN_MODE" 
+			description="RPK2_PREVIEW_OPEN_MODE_DESC">
+			<option value="0">RPK2_NEW_WINDOW</option>
+			<option value="1">RPK2_JOOMLA_MODAL</option>
+		</param>
+		<param 
+			name="show_debug_info" 
+			type="radio" default="0" 
+			label="RPK2_SHOW_DEBUG_INFO" 
+			description="RPK2_SHOW_DEBUG_INFO_DESC">
+			<option value="0">RPK2_NO</option>
+			<option value="1">RPK2_YES</option>
+		</param>
+		<param 
+			name="show_debug_error" type="radio" 
+			default="1" 
+			label="RPK2_SHOW_ERROR_MESSAGES" 
+			description="RPK2_SHOW_ERROR_MESSAGES_DESC">
+			<option value="0">RPK2_NO</option>
+			<option value="1">RPK2_YES</option>
+		</param>
+	</params>
+	
+<!-- ========= JM 1.7========== -->	
+	<fieldset
+		name="draft"
+		label="RPK2_SETTINGS"
+		description="RPK2_SETTINGS_DESC">
+		
+		<field
+			name="targettype"
+			type="radio"
+			default="1"
+			label="RPK2_PREVIEW_OPEN_MODE"
+			description="RPK2_PREVIEW_OPEN_MODE_DESC">
+			<option
+				value="0">RPK2_NEW_WINDOW</option>
+			<option
+				value="1">RPK2_JOOMLA_MODAL</option>
+		</field>
+		<field
+			name="show_debug_info"
+			type="radio"
+			default="1"
+			label="RPK2_SHOW_DEBUG_INFO"
+			description="RPK2_SHOW_DEBUG_INFO_DESC">
+			<option
+				value="0">RPK2_NO</option>
+			<option
+				value="1">RPK2_YES</option>
+		</field>
+		<field 
+			name="show_debug_error" 
+			type="radio" default="1" 
+			label="RPK2_SHOW_ERROR_MESSAGES" 
+			description="RPK2_SHOW_ERROR_MESSAGES_DESC">
+			<option value="0">RPK2_NO</option>
+			<option value="1">RPK2_YES</option>
+		</field>
+	</fieldset>
+</config>

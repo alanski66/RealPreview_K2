@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system" method="upgrade">
+        <name>System - K2 Real Preview</name>
+        <author>Alan Sparkes</author>
+        <creationDate>September 2011</creationDate>
+        <copyright>Copyright (C) 2010 Joomkit Ltd. All rights reserved..</copyright>
+        <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+        <authorEmail>info@joomkit.com</authorEmail>
+        <authorUrl>www.joomkit.com</authorUrl>
+        <version>0.1</version>
+        <description>Redirects user to K2 draft</description>
+        <files>
+			<filename plugin="jkrealpreview_k2">jkrealpreview_k2.php</filename>
+        </files>
+        
+</install>
