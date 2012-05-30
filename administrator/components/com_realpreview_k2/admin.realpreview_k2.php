@@ -1,7 +1,9 @@
 <?php 
 defined('_JEXEC') or die('Restricted access'); 
 
-JPlugin::loadLanguage('com_k2',JPATH_ADMINISTRATOR);
+$jlang =& JFactory::getLanguage();
+$jlang->load('com_k2', JPATH_ADMINISTRATOR);
+
 JTable::addIncludePath(JPATH_COMPONENT.DS.'tables');
 
 require_once(JPATH_COMPONENT.DS.'controller.php');
