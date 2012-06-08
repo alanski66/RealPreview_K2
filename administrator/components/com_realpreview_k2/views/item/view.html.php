@@ -37,13 +37,16 @@ class JViewItem extends JView
 		JRequest::setVar('hidemainmenu', 1);
 		$document = &JFactory::getDocument();
 		
-		$js_path = JURI::root(true).'/administrator/components/com_realpreview_k2/assets/js/';
-		$script_file = $js_path.'jquery-1.7.1.js';
+		$asset_path = JURI::root(true).'/administrator/components/com_realpreview_k2/assets/';
+		$script_file = $asset_path.'js/jquery-1.7.1.js';
 		$document->addScript($script_file);
-		$script_file = $js_path.'jquery-ui-1.8.16.min.js';
+		$script_file = $asset_path.'js/jquery-ui-1.8.16.min.js';
 		$document->addScript($script_file);
-		$script_file = $js_path.'item.js';
+		$script_file = $asset_path.'js/item.js';
 		$document->addScript($script_file);
+                
+                
+                $document->addStyleSheet($asset_path.'/css/realpreview.css');
 		
 		$script_file = RealpreviewHelper::get_k2_file('nicEdit.js');
 		if($script_file)$document->addScript($script_file);

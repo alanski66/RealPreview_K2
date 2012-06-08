@@ -7,11 +7,11 @@ $linktype = (int)$this->linktype;
 //$linkmethod = ($linktype) ? "target=\"_blank\"" : "class=\"modal\""; 
 $linkmethod='';
 if($linktype)
-	$preview_attr =" class=\"modal\" rel=\"{handler:'iframe',size:{x:1000,y:600}}\" "; 
+	$preview_attr =" class=\"modal icon camera\" rel=\"{handler:'iframe',size:{x:1000,y:600}}\" "; 
 else	
-	$preview_attr = " target=\"_blank\" "; 
+	$preview_attr = "class=\"icon camera\" target=\"_blank\" "; 
 
-echo '<h3><a href="#">'.JText::_('RPK2_VERSIONS').'</a></h3><div>';
+echo '<h3><a href="#">'.JText::_('RPK2_VERSIONS').'</a></h3>';
 
 $link = 'index.php?option=com_k2&amp;view=item&amp;layout=item&amp;id='.$this->row->itemid;
 $root = JURI::root();
@@ -27,7 +27,7 @@ if(empty($item_versions))
 else
 {
 ?>
-
+<div>
 <table style="font-size:100%" width="100%" cellspacing="1" class="paramlist admintable">
 <tbody>	
 	<tr>
@@ -60,9 +60,9 @@ else
 
 			$current =$v->version;
 			$class ='';
-			$edit ='<a href="'.$editlink.'">'.JText::_('RPK2_EDIT').'</a>&nbsp;|&nbsp;';
+			$edit ='<a class="icon pencil" href="'.$editlink.'">'.JText::_('RPK2_EDIT').'</a>&nbsp;|&nbsp;';
 			//$delcurrent  ='<a href="'.$deletelink.'">'.JText::_('RPK2_DELETE').'</a>';
-			$delcurrent  ='<a href="'.$deletelink.'" onclick="return confirm(\''.$confirm_delete.'\')">';
+			$delcurrent  ='<a class="icon trash" href="'.$deletelink.'" onclick="return confirm(\''.$confirm_delete.'\')">';
 			$delcurrent .= JText::_('RPK2_DELETE').'</a>';
 		}
 		
@@ -101,15 +101,20 @@ else
 			<td>{$state}</td>
 			<td>
 				{$vdate}<br />{$by_txt}<em>{$name}</em>
+                                ";
+//                echo "<br>v created  by = ". $v->created_by;
+//                echo "<br>v modified by = ". $v->modified_by;
+                
+                echo "
 			</td>
 			<td nowrap {$class}>{$edit}
 			<a {$linkmethod} {$preview_attr}  href=\"{$previewurl}\">{$preview_txt}</a>
 			|&nbsp;{$delcurrent}</td>
 			</tr>";
 	}
-	echo"</tbody></table>";
+	echo"";
 }
 
 ?>
-        
-        
+</tbody></table>
+</div>

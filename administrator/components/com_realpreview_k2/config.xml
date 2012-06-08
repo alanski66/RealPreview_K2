@@ -20,9 +20,17 @@
 		</param>
 		<param 
 			name="show_debug_error" type="radio" 
-			default="1" 
+			default="0" 
 			label="RPK2_SHOW_ERROR_MESSAGES" 
 			description="RPK2_SHOW_ERROR_MESSAGES_DESC">
+			<option value="0">RPK2_NO</option>
+			<option value="1">RPK2_YES</option>
+		</param>
+		    <param 
+			name="publishreturn" 
+			type="radio" default="1" 
+			label="RPK2_PUBLISH_SAVE_RETURN_LABEL" 
+			description="RPK2_PUBLISH_SAVE_RETURN">
 			<option value="0">RPK2_NO</option>
 			<option value="1">RPK2_YES</option>
 		</param>
@@ -48,7 +56,7 @@
 		<field
 			name="show_debug_info"
 			type="radio"
-			default="1"
+			default="0"
 			label="RPK2_SHOW_DEBUG_INFO"
 			description="RPK2_SHOW_DEBUG_INFO_DESC">
 			<option
@@ -58,9 +66,17 @@
 		</field>
 		<field 
 			name="show_debug_error" 
-			type="radio" default="1" 
+			type="radio" default="0" 
 			label="RPK2_SHOW_ERROR_MESSAGES" 
 			description="RPK2_SHOW_ERROR_MESSAGES_DESC">
+			<option value="0">RPK2_NO</option>
+			<option value="1">RPK2_YES</option>
+		</field>
+        <field 
+			name="publishreturn" 
+			type="radio" default="1" 
+			label="RPK2_PUBLISH_SAVE_RETURN_LABEL" 
+			description="RPK2_PUBLISH_SAVE_RETURN">
 			<option value="0">RPK2_NO</option>
 			<option value="1">RPK2_YES</option>
 		</field>

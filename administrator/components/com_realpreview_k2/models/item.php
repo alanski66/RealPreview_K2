@@ -150,11 +150,8 @@ class JModelItem extends JModel
         
         if ($row->id) {
             $datenow = &JFactory::getDate();
-            var_dump($datenow);
             $row->modified = $datenow->toMySQL();
-            var_dump( $row->modified);
-            //die();
-            //$row->modified = "2009-09-11";
+            
             $row->modified_by = $user->get('id');
             //joomkit alan 2012-05-11
             //$row->created_by = $user->get('id');
@@ -463,7 +460,9 @@ print_r($row->attachments);
 
         $cache = &JFactory::getCache('com_k2');
         $cache->clean();
-		
+	
+        
+       
 		if($publish_draft)
 			return true;
 			
@@ -477,6 +476,8 @@ print_r($row->attachments);
 			$redirect = "index.php?option=com_k2&view=items";
 			//$redirect .= "&filter_featured=-1&filter_trash=0";
 		}
+                      
+			              
 			
 		$mainframe->redirect($redirect, $msg);
     }
@@ -496,9 +497,7 @@ print_r($row->attachments);
 		$version = JRequest::getVar('version');
 		$draft_id = JRequest::getVar('id');
 		$redirect = "index.php?option={$option}&itemid={$itemid}&version={$version}";
-		//joomkit
-                $redirect = "index.php?option=com_k2&view=items";
-
+		
                 $table = RealpreviewHelper::get_table_name();
 		
 		$db	= & JFactory::getDBO();
@@ -553,7 +552,25 @@ print_r($row->attachments);
 		RealpreviewHelper_Restore::restore_gallery($draft);
 		RealpreviewHelper_Restore::restore_video($draft);
 		RealpreviewHelper_Restore::restore_tags($draft);
-		
+                
+                //joomkit alan
+				
+                     //get config for return to items on publish
+                      $RPparams = &JComponentHelper::getParams( 'com_realpreview_k2' );
+                      var_dump($RPparams->get('publishreturn'));
+                      
+                      if($RPparams->get('publishreturn') == "1"):
+                        //joomkit
+                            $redirect = "index.php?option=com_k2&view=items";
+  
+                      elseif($RPparams->get('publishreturn') == "0"):
+                        
+                          $redirect = "index.php?option={$option}&itemid={$itemid}&version={$version}";
+                            $msg = JText::_('RPK2_DRAFT_PUBLISHED');
+                             
+                      endif;
+                     
+     
 		$mainframe->redirect($redirect,JText::_('RPK2_DRAFT_PUBLISHED'));
 		
 	}
